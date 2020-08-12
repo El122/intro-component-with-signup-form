@@ -1,0 +1,162 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.attribution a {
+    color:hsl(248, 32%, 49%);
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+body {
+    background: url(images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+}
+
+main {
+    padding: 100px 5%;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .text {
+        width: 50%;
+        font-size: 16px;
+        color: white;
+        margin-right: 20px;
+
+        h1 {
+            font-size: 45px;
+            line-height: 50px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-weight: 600;
+            line-height: 25px;
+        }
+    }
+
+    .formBlock {
+        width: 50%;
+
+        .tryFree {
+            background-color: hsl(248, 32%, 49%);
+            text-align: center;
+            color: white;
+            padding: 20px;
+            font-weight: 600;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px hsl(0, 59%, 63%, 0.5);
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 10px;
+            border: 1px solid hsl(246, 25%, 77%);
+            text-align: center;
+
+            input {
+                width: 75%;
+                margin: 15px;
+                padding: 20px;
+                border-radius: 10px;
+                outline: none;
+                border: 1px solid hsl(246, 25%, 77%);
+            }
+
+            input:first-child {
+                margin-top: 40px;
+            }
+
+            input:invalid {
+                border: 2px solid hsl(0, 100%, 74%);
+            }
+
+            input:valid:required {
+                border: 1px solid hsl(246, 25%, 77%);
+            }
+
+            button {
+                width: 83%;
+                margin-top: 15px;
+                padding: 20px;
+                border-radius: 10px;
+                outline: none;
+                background-color: hsl(154, 59%, 51%);
+                outline: none;
+                border: 0;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: white;
+                font-size: 16px;
+                margin-bottom: 15px;
+                box-shadow: 0 5px hsl(154, 59%, 45%);
+            }
+
+            p.error {
+                font-size: 12px;
+                color: hsl(0, 100%, 74%);
+                text-align: right;
+                margin-right: 10%;
+                font-weight: 600;
+                margin-top: -10px;
+                display: none;
+            }
+
+            p.agreeing {
+                color: hsl(246, 25%, 77%);
+                font-size: 12px;
+                text-align: center;
+                margin-bottom: 40px;
+
+                span {
+                    color: hsl(0, 100%, 74%);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    body {
+        background: url(images/bg-intro-mobile.png);
+        background-color: hsl(0, 100%, 74%);
+        background-size: cover;
+    }
+
+    main {
+        .wrapper {
+            flex-direction: column;
+        }
+
+        .text {
+            width: 90%;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .formBlock {
+            width: 90%;
+
+            p {
+                margin: 0 20px;
+            }
+        }
+    }
+}
