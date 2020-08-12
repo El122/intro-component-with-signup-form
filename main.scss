@@ -5,7 +5,7 @@
 }
 
 .attribution a {
-    color:hsl(248, 32%, 49%);
+    color: hsl(248, 32%, 49%);
     font-weight: 700;
 }
 
@@ -25,8 +25,14 @@ main {
     padding: 100px 5%;
 
     .wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         max-width: 1100px;
         margin: 0 auto;
@@ -61,6 +67,7 @@ main {
             font-weight: 600;
             border-radius: 10px;
             margin-bottom: 20px;
+            -webkit-box-shadow: 0 5px hsl(0, 59%, 63%, 0.5);
             box-shadow: 0 5px hsl(0, 59%, 63%, 0.5);
         }
 
@@ -105,6 +112,7 @@ main {
                 color: white;
                 font-size: 16px;
                 margin-bottom: 15px;
+                -webkit-box-shadow: 0 5px hsl(154, 59%, 45%);
                 box-shadow: 0 5px hsl(154, 59%, 45%);
             }
 
@@ -142,6 +150,9 @@ main {
 
     main {
         .wrapper {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
         }
 
@@ -159,4 +170,19 @@ main {
             }
         }
     }
+}
+
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
 }
